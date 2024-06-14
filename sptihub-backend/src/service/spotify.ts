@@ -12,7 +12,6 @@ class SpotifyService {
 
     async getAccessToken() {
         try {
-            // this.SPOTIFY_ACCESS_TOKEN = "BQBz8LDiEA_D9ahCOdFOBPSI8wRzFQKupgtqvGRSm0TToN3HowUN0E2kTc8CB2s1Ms_cHntBYaRgJF7gHYtEuk_D7yJxoqJ0zc7gL_1rzBiNkzUxL0c"
             await fetch('https://accounts.spotify.com/api/token',
                 {
                 method: 'POST',
