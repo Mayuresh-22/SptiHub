@@ -80,7 +80,7 @@ Before you begin, ensure you have met the following requirements:
         SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
         GROQ_API_KEY=your_groq_api_key
         ```
-
+        
 4. Before deploying add secrets to the worker via wrangler:
      - run the following command by replacing `<KEY>` and you will be asked for the value
      - ```bash
@@ -88,14 +88,20 @@ Before you begin, ensure you have met the following requirements:
        ```
      - check documentation for more info [here](https://developers.cloudflare.com/workers/configuration/secrets/)
 
-4. Deploy the backend to Cloudflare Workers (make sure your are logged into Cloudflare):
+5. Now add bindings in wrangler.toml file
+    - Run the following command to do it:
+        ```bash
+        npm run cf-typegen
+        ```
+
+6. Deploy the backend to Cloudflare Workers (make sure you are logged into Cloudflare):
     ```bash
     npm run deploy
     ```
 
 ## Usage
 
-1. Enter your Spotify playlist URL in the designated field on the frontend.
+1. Enter your Spotify playlist URL in the designated field on the front end.
 2. Provide your GitHub username.
 3. Click the "Unleash Your Poetic Muse" button.
 4. Enjoy your personalized poem!
